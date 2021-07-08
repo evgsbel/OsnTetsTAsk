@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="news-item">
+        <img class="news-item-preview" src="{$id | resource : 'preview_image'}" alt="{$pagetitle}">
+        <div class="news-item-title">{$pagetitle}</div>
+        <div class="news-item-text">{$content | strip_tags | truncate : 200 : '...' : true}</div>
+        <div class="news-item-pubdate">{$publishedon | date : "d.m.Y"}</div>
+    </div>
+</body>
+</html>
